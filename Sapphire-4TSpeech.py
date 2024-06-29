@@ -5,6 +5,21 @@ __title__ = "Sapphire 4TSpeech Tool"
 
 __LOGO__ = "      ^\n     # #\n    ## ##\n  ####0####\n#####0O0#####\n  ####0####\n    ## ##\n     # #\n      v"
 
+__ASCIILOGO__ = r"""
+
+
+:'######:::::'###::::'########::'########::'##::::'##:'####:'########::'########:::::'######:::'#######::'########::'########:
+'##... ##:::'## ##::: ##.... ##: ##.... ##: ##:::: ##:. ##:: ##.... ##: ##.....:::::'##... ##:'##.... ##: ##.... ##: ##.....::
+ ##:::..:::'##:. ##:: ##:::: ##: ##:::: ##: ##:::: ##:: ##:: ##:::: ##: ##:::::::::: ##:::..:: ##:::: ##: ##:::: ##: ##:::::::
+. ######::'##:::. ##: ########:: ########:: #########:: ##:: ########:: ######:::::: ##::::::: ##:::: ##: ########:: ######:::
+:..... ##: #########: ##.....::: ##.....::: ##.... ##:: ##:: ##.. ##::: ##...::::::: ##::::::: ##:::: ##: ##.. ##::: ##...::::
+'##::: ##: ##.... ##: ##:::::::: ##:::::::: ##:::: ##:: ##:: ##::. ##:: ##:::::::::: ##::: ##: ##:::: ##: ##::. ##:: ##:::::::
+. ######:: ##:::: ##: ##:::::::: ##:::::::: ##:::: ##:'####: ##:::. ##: ########::::. ######::. #######:: ##:::. ##: ########:
+:......:::..:::::..::..:::::::::..:::::::::..:::::..::....::..:::::..::........::::::......::::.......:::..:::::..::........::
+
+
+"""
+
 from TikTokLive.client.client import TikTokLiveClient
 from TikTokLive.client.logger import LogLevel
 from TikTokLive.events import ConnectEvent, GiftEvent, CommentEvent
@@ -75,7 +90,7 @@ async def on_chat(event: CommentEvent):
     else:
         if sub_only == "False":
             n=0
-            if n/=4
+            #if n/=4
             print(f"{user.unique_id} is not a subscriber")
             print(f"{user.unique_id}: \"{event.comment}\"")
             display_user_badges(user)
@@ -94,5 +109,5 @@ async def run_client():
 
 if __name__ == '__main__':
     client.logger.setLevel(LogLevel.INFO.value)
-    print("\n\nThe Sapphire Imagination Society Presents:\n\n__________________________________\n" + __title__ + "\n\n" + __author__ + "\n" + __copyright__ + "\n" + __license__ + "\n\n" + __LOGO__ + "\n\n")
+    print("\n\nThe Sapphire Imagination Society Presents:\n\n__________________________________\n" + __title__ + "\n\n" + __author__ + "\n" + __copyright__ + "\n" + __license__ + "\n\n" + __LOGO__ + "\n\n" + __ASCIILOGO__ + "\n\n")
     asyncio.get_event_loop().run_until_complete(run_client())
